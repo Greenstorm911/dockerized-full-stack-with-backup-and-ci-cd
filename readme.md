@@ -23,7 +23,7 @@ imagine that you have a web project and you need a complete `full-stack Docker s
 ## Features ✨
 
 - **PostgreSQL Database**: A `db` service running a PostgreSQL container.
-- **Automated Backup**: A automated `db-backup` service that runs daily by defult [Customizing the Backup Frequency](customizing-the-backup-frequency) backups of your PostgreSQL database and sends them via Telegram.
+- **Automated Backup**: A automated `db-backup` service that runs daily by defult [Customizing the Backup Frequency](#custom-id) backups of your PostgreSQL database and sends them via Telegram.
 - **CI/CD Pipeline**: A simple GitHub Actions CI/CD pipeline that automates the deployment of your application.
 - **Frontend & Backend Setup**: Empty Dockerfiles in `frontend/` and `backend/` for you to fill in your application code and customize as needed.
 
@@ -69,7 +69,7 @@ docker compose up --build
 
 This will build all the services (backend, frontend, PostgreSQL, and backup) and start them in their respective containers.
 
-## Customizing the Backup Frequency ⏰
+## Customizing the Backup Frequency ⏰ {#custom-id}
 
 The backup container runs a cron job that automatically creates backups of your PostgreSQL database and sends them to your Telegram bot. The backup is configured to run every day at 3:00 AM (server time). You can customize the backup time by editing the `crontab` file in the `backup/` folder.
 
