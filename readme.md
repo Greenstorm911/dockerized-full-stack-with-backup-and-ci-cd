@@ -1,6 +1,7 @@
 # Docker Full Stack Project with Backup and CI/CD Pipeline 🚀
 
-This repository provides a complete full-stack Docker setup for a backend, frontend, and PostgreSQL database with a built-in backup system that sends backups via Telegram. The project also includes a CI/CD pipeline for automated deployment.
+imagine that you have a web project and you need a complete `full-stack Docker setup`, `CI/CD pipeline` and a `backup system` that sends backups via a platform to you, these are the things that no matter what technology you use or even what the project is, i made this open source template so you can use for all of your web projects.
+
 
 ## Project Structure 📁
 ```
@@ -21,10 +22,16 @@ This repository provides a complete full-stack Docker setup for a backend, front
 
 ## Features ✨
 
-- **Frontend & Backend Setup**: Empty Dockerfiles in `frontend/` and `backend/` for you to fill in your application code and customize as needed.
 - **PostgreSQL Database**: A `db` service running a PostgreSQL container.
-- **Automated Backup**: A `db-backup` service that runs daily backups of your PostgreSQL database and sends them via Telegram.
-- **CI/CD Pipeline**: A GitHub Actions CI/CD pipeline that automates the deployment of your application.
+- **Automated Backup**: A automated `db-backup` service that runs daily by defult [Customizing the Backup Frequency](customizing-the-backup-frequency) backups of your PostgreSQL database and sends them via Telegram.
+- **CI/CD Pipeline**: A simple GitHub Actions CI/CD pipeline that automates the deployment of your application.
+- **Frontend & Backend Setup**: Empty Dockerfiles in `frontend/` and `backend/` for you to fill in your application code and customize as needed.
+
+
+## Comming Soon Features ✨ 
+
+
+
 
 ## Quick Start 🚀
 
