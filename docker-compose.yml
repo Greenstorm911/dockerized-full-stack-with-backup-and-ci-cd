@@ -1,0 +1,63 @@
+services:
+    # frontend:
+    #     build:
+    #         context: ./frontend
+    #     ports:
+    #         - "3000:3000"
+    #     depends_on:
+    #         - backend
+    #     networks:
+    #         - default
+
+    # backend:
+    #     build:
+    #         context: ./backend
+    #     ports:
+    #         - "8000:8000"
+    #     depends_on:
+    #         - db
+    #     volumes:
+    #         - ./backend:/app
+    #         - /root/vol/project_name/media:/app/media
+    #     command:
+            
+    #     networks:
+    #         - default
+
+    db:
+        image: postgres:16
+        environment:
+            POSTGRES_DB: ${POSTGRES_DB}
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+        ports:
+            - "5434:5432"
+        networks:
+            - default
+
+    db-backup:
+        build:
+            context: ./backup
+        depends_on:
+            - db
+        environment:
+            - PG_HOST=db
+            - PG_PORT=5432
+            - PG_DATABASE=${POSTGRES_DB}
+            - PG_USER=${POSTGRES_USER}
+            - PG_PASSWORD=${POSTGRES_PASSWORD}
+            - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+            - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+        volumes:
+            - backups:/backups
+        networks:
+            - default
+
+volumes:
+    postgres_data:
+    media_data:
+    backups:
+networks:
+    default:
