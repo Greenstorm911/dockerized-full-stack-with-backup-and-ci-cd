@@ -69,7 +69,7 @@ docker compose up --build
 
 This will build all the services (backend, frontend, PostgreSQL, and backup) and start them in their respective containers.
 
-## Customizing the Backup Frequency ⏰ {#custom-id}
+## Customizing the Backup Frequency{#custom-id} ⏰ 
 
 The backup container runs a cron job that automatically creates backups of your PostgreSQL database and sends them to your Telegram bot. The backup is configured to run every day at 3:00 AM (server time). You can customize the backup time by editing the `crontab` file in the `backup/` folder.
 
