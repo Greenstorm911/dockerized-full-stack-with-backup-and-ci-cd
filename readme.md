@@ -3,7 +3,7 @@
 This repository provides a complete full-stack Docker setup for a backend, frontend, and PostgreSQL database with a built-in backup system that sends backups via Telegram. The project also includes a CI/CD pipeline for automated deployment.
 
 ## Project Structure 📁
-
+```
 ├── .github
 │   └── workflows
 │       └── deploy.yaml           # CI/CD Pipeline (GitHub Actions)
