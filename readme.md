@@ -147,6 +147,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Enjoy building your project! If you have any questions or run into any issues, feel free to open an issue or contribute to the repository. 🚀
-```
-
-This is the full `README.md` formatted as you requested, and it explains everything from how to customize the backup schedule to how to get the project running. You can copy-paste it directly into your `README.md` file.
